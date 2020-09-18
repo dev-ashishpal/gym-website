@@ -1,0 +1,33 @@
+.header{
+  background-image:linear-gradient(rgba($color-primary,0.6),rgba($color-primary,0.6)) , url("img/hero2.jpg");
+  background-size: cover;
+  background-position: top;
+  grid-row:1 / 2;
+  grid-column: 1 / -1;
+  padding:10rem;
+
+  display: grid;
+  grid-template-rows: repeat(6,minmax(1fr,min-content));
+  grid-template-columns: minmax(1fr,min-content);
+
+  @include respond(phone){
+    padding:5rem;
+  }
+
+  &__main-heading{
+    grid-row:1 / 2;
+    align-self: end;
+  }
+
+  &__sub-heading{
+    grid-row:2 / 3;
+  }
+
+  &__btn{
+    grid-row: 3 / 4;
+    align-self: start;
+    justify-self: start;
+
+  }
+
+}

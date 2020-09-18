@@ -1,0 +1,25 @@
+{
+  "name": "PumpUp",
+  "version": "1.0.0",
+  "description": "pumpUp Gym website",
+  "main": "index.js",
+  "scripts": {
+    "start-sass": "node-sass sass/main.scss style.css -w",
+    "devserver": "live-server --browser=firefox",
+    "start": "npm-run-all --parallel devserver start-sass",
+    "compile-sass": "node-sass sass/main.scss style.comp.css",
+    "prefix-css": "postcss --use autoprefixer -b \"last 10 versions\" style.comp.css -o style.prefix.css",
+    "compress-css": "node-sass style.prefix.css style.css --output-style compressed",
+    "build-css": "npm-run-all compile-sass prefix-css compress-css"
+  },
+  "author": "Ashish",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.8.4",
+    "concat": "^1.0.3",
+    "node-sass": "^4.14.1",
+    "postcss-cli": "^7.1.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}

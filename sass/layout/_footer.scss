@@ -1,0 +1,39 @@
+.footer{
+  background-color: $color-primary;
+  grid-column: full-start / full-end;
+  padding:10rem;
+}
+
+.nav{
+  list-style: none;
+
+
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+  align-items: center;
+  grid-gap: 2rem;
+
+  &__link{
+    &:link,
+    &:visited{
+      color:$color-white;
+      padding:1.5rem 2rem;
+      text-align: center;
+      text-decoration: none;
+      display: block;
+      transition: all 0.2s;
+    }
+
+    &:hover{
+      background-color:rgba($color-white,0.04);
+      transform: translateY(-3px);
+    }
+  }
+}
+
+.copyright{
+  font-size:1.4rem;
+  color:$color-white;
+  margin-top:6rem;
+  text-align: center;
+}

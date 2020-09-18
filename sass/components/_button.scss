@@ -1,0 +1,27 @@
+.btn-primary{
+  &,
+  &:link,
+  &:visited{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color:$color-grey-1;
+    background-color: $color-secondary;
+    padding:1rem 2rem;
+    border-radius: 3px;
+    font-size:2rem;
+    transition:all 0.3s;
+    //////////////// for button ///////////////
+    border:none;
+    outline: none;
+    cursor:pointer;
+  }
+
+  &:hover{
+    background-image:linear-gradient(to right bottom,$color-secondary-dark,$color-secondary);
+  }
+
+  &:active{
+    transform: translateY(6px);
+  }
+}

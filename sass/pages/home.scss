@@ -1,0 +1,14 @@
+.container{
+  display:grid;
+  height:80vh;
+  grid-template-columns:[full-start] 1fr [main-start] repeat(8, [col-start] minmax(min-content,14rem) [col-end] ) [main-end] 1fr [full-end];
+  grid-template-rows: 90vh repeat(3,min-content)  35vw ;
+
+  @include respond(tab-port){
+    grid-template-rows: 90vh repeat(3,min-content)  45vw ;
+  }
+
+  @include respond(phone){
+    grid-template-rows: 90vh repeat(3,min-content)  65vw ;
+  }
+}

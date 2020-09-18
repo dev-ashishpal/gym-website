@@ -1,0 +1,38 @@
+.about{
+  //background-color: #1dbf73;
+  grid-column: main-start/ main-end;
+  padding:10rem 0;
+  margin:0 auto;
+  width:90%;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+  grid-row-gap: 3rem;
+  grid-column-gap: 5rem;
+
+  &__heading{
+    grid-column: 1 / -1;
+    grid-row:1 / 2;
+    justify-self: center;
+  }
+
+  &__box{
+    display: grid;
+    justify-items: center;
+
+    h4{
+      align-self: start;
+    }
+  }
+
+  &__icon{
+    height:4rem;
+    width:4rem;
+    fill:$color-secondary;
+    margin-bottom:2rem;
+
+  }
+
+  &__text{
+  }
+}
